@@ -26,7 +26,7 @@ int print(int arr[],int n)
     }
 }
 int main(){
-    int arr[] = {1,2,3,4,5,6,7,8,9};
+    int arr[] = {1,2,3,4,6,8,7,5,9};
     int n = sizeof(arr)/sizeof(int);
     selectionsort(arr,n);
     print(arr,n);
