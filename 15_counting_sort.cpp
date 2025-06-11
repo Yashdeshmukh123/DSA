@@ -29,21 +29,22 @@ void countingsort(int arr[] , int n)
     }
     for(int i=0 ; i<n ; i++)
     {
-        cout<<arr[i]<<endl;
+        cout<<arr[i]<<",";
     }
     
 }
 
 
 int main(){
-    int arr[8] = {1,4,1,3,2,4,3,7};
+    // int arr[8] = {1,4,1,3,2,4,3,7};
+    int arr[10] = {3,6,2,1,8,7,4,5,3,1};
     int n  = sizeof(arr)/sizeof(int);
-    sort(arr,arr+n);
-    // countingsort(arr,n);
-     for(int i=0 ; i<n ; i++)
-    {
-        cout<<arr[i]<<endl;
-    }
+    // sort(arr,arr+n);
+    // // countingsort(arr,n);
+    //  for(int i=0 ; i<n ; i++)
+    // {
+    //     cout<<arr[i]<<endl;
+    // }
     
 return 0;
 }
