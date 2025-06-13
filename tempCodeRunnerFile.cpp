@@ -1,6 +1,2 @@
-arr,arr+n);
-    // // countingsort(arr,n);
-    //  for(int i=0 ; i<n ; i++)
-    // {
-    //     cout<<arr[i]<<endl;
-    // }
+,5,6,7,8,9,10,11,12,13};
+    // int n = 14;
