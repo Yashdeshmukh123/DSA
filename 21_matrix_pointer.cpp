@@ -18,6 +18,8 @@ void matrix_pointer(int mat[][4])
     cout<<"1th row value = "<<*(mat+1)<<endl;
     cout<<"2th row value = "<<*(mat+2)<<endl;
     
+//use of dereferencing of pointers
+
     cout<<"0th row value = "<<*(*(mat+2)+3)<<endl;
     cout<<"1th row value = "<<*(mat+1)<<endl;
     cout<<"2th row value = "<<*(mat+2)<<endl;

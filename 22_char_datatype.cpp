@@ -10,7 +10,6 @@ void toUpper(char word[],int n)
         char ch = word[i];
         if(ch>='A' && ch<='Z')
         {
-            // cout<<word[i]<<endl;
             continue;
         }
         else
@@ -18,7 +17,25 @@ void toUpper(char word[],int n)
             //  int pos = ch - 'a';
              word[i] = (ch - 'a') + 'A';
         }
-        // cout<<word[i]<<endl;
+    }
+    cout<<word<<endl;
+}
+
+
+void toLower(char word[],int n)
+{
+    for(int i=0 ; i<n ; i++)
+    {
+        char ch = word[i];
+        if(ch>='a' && ch<='z')
+        {
+            continue;
+        }
+        else
+        {
+            //  int pos = ch - 'a';
+             word[i] = (ch - 'A') + 'a';
+        }
     }
     cout<<word<<endl;
 
@@ -38,11 +55,8 @@ int main(){
     // cout<< cha <<endl;
     
     char word[] = "ApPle"; 
-    toUpper(word,strlen(word));
-    // toUpper(word , strlen(word) );
-
-
-    
+    // toUpper(word,strlen(word));
+    toLower(word,strlen(word));
 
 return 0;
 }

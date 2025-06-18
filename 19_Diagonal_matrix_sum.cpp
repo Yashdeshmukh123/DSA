@@ -17,7 +17,7 @@ int diagonalsum(int arr1[3][3],int n )
 
     cout<<sum;
 }
-
+ 
 int main(){
     int arr[4][4] = {  {1,2,3,4},
                      {5,6,7,8},
@@ -28,9 +28,7 @@ int main(){
                     
     int arr1[3][3] = {{1,2,3},
                      {4,5,6},
-                     {7,8,9}
-
-    };
+                     {7,8,9}};
 
     diagonalsum(arr1,3);
 return 0;
