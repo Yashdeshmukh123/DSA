@@ -20,12 +20,13 @@ int main(){
     // }
 
     // different methods in strings
-    string word = "i love c++ &java";
+    
     cout<<str.length()<<endl;
     cout<<str.at(4)<<endl;
     cout<<str.substr(2,4)<<endl;
-
-    cout<<str.find("c++")<<endl;
+    string word = "i love c++ & java";
+    cout<<word.find("c++")<<endl;
+    cout<<word.find("yash")<<endl;
 
 
 
