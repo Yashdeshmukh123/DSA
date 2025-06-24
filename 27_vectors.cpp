@@ -13,20 +13,24 @@ int* func()
     return ptr;
 }
 
-int func_2d_array(int size)
+int func_2d_array(int row ,int size)
 {
-    int *ptr1 = new int[size];
-    for(int i=0 ; i<size ; i++)
+    int **ptr = new int*[row];
+   
+    for(int i=0 ; i<row ; i++)
     {
-        cin>>ptr1[i];
-        // ptr1[i] = i;
-        // cout<<ptr1[i];
+        ptr[i] = new int[size];
     }
-    for(int i=0 ; i<size ; i++)
+
+    int x=1;
+    for(int i=0 ; i<row ;i++)
     {
-        cout<<ptr1[i];
-        // ptr1[i] = i;
-        // cout<<ptr1[i];
+        for(int j=0 ; j<size ; j++)
+        {
+            ptr[i][j]=x++;
+            cout<<ptr[i][j]<<" ";
+        }
+        cout<<endl;
     }
 }
 
@@ -50,9 +54,13 @@ int main(){
     // cout<<*x<<endl;
     // cout<<x<<endl;
 
-    int size;
+    int size,row;
+    cout<<"enter no. of rows : ";
+    cin>>row;
+    cout<<"enter no. of cols : ";
     cin>>size;
-    func_2d_array(size);
+
+    func_2d_array(row,size);
 
 return 0;
 }
