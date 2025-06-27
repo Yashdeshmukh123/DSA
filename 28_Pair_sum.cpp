@@ -34,7 +34,6 @@ vector<int> pairsum(vector<int> arr , int target)
 
 int main(){
     vector<int> vect = {2,7,11,15};
-    
     vector<int> ans = pairsum(vect,13);
     cout<<ans[0]<<" "<<ans[1]<<endl;
 return 0;

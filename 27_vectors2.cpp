@@ -7,7 +7,7 @@ int main(){
     vector<int> vect1;
     // cout<<vect1.size();
 
-    vector<int> vect2 = {1,2,3,4};
+    vector<int> vect2 = {1,2};
     // for(int i=0 ;i<vect2.size();i++)
     // {
     //     cout<<vect2[i]<<endl;

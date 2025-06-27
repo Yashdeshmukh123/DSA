@@ -2,8 +2,10 @@
 #include <string>
 using namespace std;
 
-int main(){
-    string str = "aeioujjdheioua";
+// practice question no. 1 - count how manny times lower case vowel come in the string....
+
+void lowercasevowel(string str)
+{
     int count = 0;
     for(int i=0 ; i<str.length();i++)
     {
@@ -14,7 +16,17 @@ int main(){
         }
     }
     cout<<count;
-    // cout<<(int)'a'<<endl;
-    // cout<<(int)'z'<<endl;
+}
+
+
+
+
+int main(){
+    string str = "aeioujjdheioua";
+    lowercasevowel(str);
+    
 return 0;
 }
+// leetcode question no. 20
+// leetcode question no. 1657
+
