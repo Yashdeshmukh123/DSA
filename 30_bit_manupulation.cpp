@@ -3,17 +3,16 @@ using namespace std;
 
 //for getting ith bit of a number..
 
-void ith_bit(int nums , int i)
+int set_ith_bit(int nums , int i)
 {
-    int index = 1<<i;
-    nums = nums&i;
-    if(nums==0)
-    {
-        cout<<"0";
-    }
-    else{
-        cout<<"1";
-    }
+    int bitmask = 1<<i;
+    return (nums|bitmask);
+}
+
+int clear_ith_bit(int nums , int i)
+{
+    int bitwise = ~(1<<i);
+    return (nums&bitwise);
 }
 
 int main(){
@@ -33,10 +32,9 @@ int main(){
     // cout<<(8&1)<<endl;//here we use 1 as a bitmask so that by doing & operation we can get last bit as 0 or 1..
     // cout<<(5&1)<<endl;
 
-    ith_bit(8,2);
-    
-    
+    // cout<< set_ith_bit(6,3)<<endl;
 
+    cout<<clear_ith_bit(6,1)<<endl;
 
 
     return 0;
