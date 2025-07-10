@@ -15,6 +15,16 @@ int clear_ith_bit(int nums , int i)
     return (nums&bitwise);
 }
 
+bool power_of_two(int num)
+{
+    if(!(num&(num-1)))
+    {
+        return true;
+    }   
+    else{
+        return false;
+    }
+}
 int main(){
     //bitwise operator
     // cout<<(3&5)<<endl;
@@ -32,10 +42,18 @@ int main(){
     // cout<<(8&1)<<endl;//here we use 1 as a bitmask so that by doing & operation we can get last bit as 0 or 1..
     // cout<<(5&1)<<endl;
 
+
+    // it sets the bit to 1 ...
     // cout<< set_ith_bit(6,3)<<endl;
 
-    cout<<clear_ith_bit(6,1)<<endl;
+    // it sets the bit to 0 ...
+    // cout<<clear_ith_bit(6,1)<<endl;
 
+    // check power of two or not 
+    cout<<power_of_two(32)<<endl;
+    cout<<power_of_two(4)<<endl;
+    cout<<power_of_two(3)<<endl;
+    cout<<power_of_two(17)<<endl;
 
     return 0;
 }
