@@ -25,6 +25,49 @@ bool power_of_two(int num)
         return false;
     }
 }
+
+int updateithbit(int nums , int i , int val)
+{
+    int bitmask = ~(1<<i);
+    nums = nums & bitmask;
+
+    nums = nums | (val<<i);
+
+    cout<<nums;
+
+}
+
+int last_i_bits(int nums , int i)
+{
+    int bitmask = ~0<<i;
+    nums = nums&bitmask;
+    cout<<nums;
+
+}
+
+int countsetbits(int nums)
+{
+     int count = 0;
+    while(nums>0){
+    int lastbit = nums & 1;
+    count += lastbit;
+    nums = nums>>1;
+    }
+
+
+    // for(int i=nums ; i>0 ; i++)
+    // {
+    //     if((i&1)==0)
+    //     {
+    //         i>>1;
+    //     }
+    //     else{
+    //         count++;
+    //         i>>1;
+    //     }
+    // }
+    cout<<count;
+}
 int main(){
     //bitwise operator
     // cout<<(3&5)<<endl;
@@ -50,10 +93,18 @@ int main(){
     // cout<<clear_ith_bit(6,1)<<endl;
 
     // check power of two or not 
-    cout<<power_of_two(32)<<endl;
-    cout<<power_of_two(4)<<endl;
-    cout<<power_of_two(3)<<endl;
-    cout<<power_of_two(17)<<endl;
+    // cout<<power_of_two(32)<<endl;
+    // cout<<power_of_two(4)<<endl;
+    // cout<<power_of_two(3)<<endl;
+    // cout<<power_of_two(17)<<endl;
+
+    // in this both the case of set and clear occurs on the basis of the values given..
+    // updateithbit(7,3,1);
+
+    // it removes last i bits , or it makes it zero..
+    // last_i_bits(15,2);
+
+    countsetbits(10);
 
     return 0;
 }
