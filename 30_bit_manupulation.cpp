@@ -53,20 +53,25 @@ int countsetbits(int nums)
     count += lastbit;
     nums = nums>>1;
     }
-
-
-    // for(int i=nums ; i>0 ; i++)
-    // {
-    //     if((i&1)==0)
-    //     {
-    //         i>>1;
-    //     }
-    //     else{
-    //         count++;
-    //         i>>1;
-    //     }
-    // }
     cout<<count;
+}
+
+int fastexpo(int x, int n)
+{
+    int ans = 1;
+    
+    while(n>0)
+    {
+        int lastbit = n&1;
+        if(lastbit==1)
+        {
+            ans = ans*x;
+        }
+        x = x*x;
+        n = n>>1;
+    }
+    cout<<ans;
+
 }
 int main(){
     //bitwise operator
@@ -104,7 +109,9 @@ int main(){
     // it removes last i bits , or it makes it zero..
     // last_i_bits(15,2);
 
-    countsetbits(10);
+    // countsetbits(10);
 
+
+    fastexpo(3,5);
     return 0;
 }
