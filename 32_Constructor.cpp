@@ -85,6 +85,16 @@ class car1{
         *mileage = *original.mileage;
     }
 
+    ~car1(){
+
+        cout<<"deleting object..";
+        if(mileage!= NULL)
+        {
+            delete mileage;
+            mileage= NULL;
+        }
+    }
+
     
 };
 
@@ -107,16 +117,25 @@ int main(){
     // cout<<c2.carcolor<<endl;
 
     // shallow copy - it works on the reference of the constructor of the object..
-    car1 c1("maruti","white");
-    car1 c2(c1);
+    // car1 c1("maruti","white");
+    // car1 c2(c1);
 
-    cout<<c2.name<<endl;
-    cout<<c2.color<<endl;
-    cout<<*c2.mileage<<endl;
+    // cout<<c2.name<<endl;
+    // cout<<c2.color<<endl;
+    // cout<<*c2.mileage<<endl;
 
-    *c2.mileage = 30;
-    cout<<*c2.mileage<<endl;
-    cout<<*c1.mileage<<endl;
+    // *c2.mileage = 30;
+    // cout<<*c2.mileage<<endl;
+    // cout<<*c1.mileage<<endl;
+
+    //desturctor...
+
+    car1 c1("BMW" , "red");
+    cout<<c1.name<<endl;
+    cout<<c1.color<<endl;
+    
+
+
 
     return 0;
 }
