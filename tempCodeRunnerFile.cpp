@@ -1,5 +1,4 @@
-for(int i=0 ; i<size ; i++)
-        // {
-        //     cin>>ptr[i];
-        // }
-        // cout<<endl;
+
+    // user u1(100);
+    // u1.setvalue("1234yash");
+    // u1.getvalue();

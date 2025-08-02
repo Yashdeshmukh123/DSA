@@ -3,13 +3,15 @@
 using namespace std;
 
 class car{
-    string carname;
-    string carcolor;
+    // string carname;
+    // string carcolor;
 
 public:
+    string carname;
+    string carcolor;
     car(string name , string color){
-        carname = name;
-        carcolor = color;
+        // carname = name;
+        // carcolor = color;
         cout<<"constructor is been called...\n";
         //this pointer
         this->carcolor = color;
@@ -27,6 +29,12 @@ public:
     }
     void getcolor(){
         cout<<carcolor<<endl;
+    }
+    car(car &original)
+    {
+        cout<<"custom copy constructor called\n";
+        carname = original.carname;
+        carcolor = original.carcolor;
     }
 
 };
@@ -52,13 +60,63 @@ public:
 
 };
 
+class car1{
+
+    public:
+        string name;
+        string color;
+        int* mileage ;
+
+    car1(string name , string color)
+    {
+        cout<<"constructor called..\n";
+        this->name = name;
+        this->color = color;
+        mileage = new int;
+        *mileage = 20;
+
+    }
+
+    car1(car1 &original)
+    {
+        name = original.name;
+        color = original.color;
+        mileage = new int;
+        *mileage = *original.mileage;
+    }
+
+    
+};
+
 int main(){
+
+    // this keyword in constuctors..
     // car c1("BMW" , "black");
     // c1.getcolor();
     // c1.getname();
 
-    user u1(100);
-    u1.setvalue("1234yash");
-    u1.getvalue();
+    // user u1(100);
+    // u1.setvalue("1234yash");
+    // u1.getvalue();
+    
+
+    //copy constructor...
+    // car c1("BMW","blue");
+    // car c2(c1);
+    // cout<<c1.carname<<endl;
+    // cout<<c2.carcolor<<endl;
+
+    // shallow copy - it works on the reference of the constructor of the object..
+    car1 c1("maruti","white");
+    car1 c2(c1);
+
+    cout<<c2.name<<endl;
+    cout<<c2.color<<endl;
+    cout<<*c2.mileage<<endl;
+
+    *c2.mileage = 30;
+    cout<<*c2.mileage<<endl;
+    cout<<*c1.mileage<<endl;
+
     return 0;
 }
