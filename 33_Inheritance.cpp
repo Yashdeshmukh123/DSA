@@ -25,8 +25,7 @@ public:
     void meow(){
         cout<<animal1<<endl;
         cout<<"meowwww..."<<endl;
-    }
-    
+    }   
 };
 
 
