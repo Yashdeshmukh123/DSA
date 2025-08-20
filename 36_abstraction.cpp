@@ -27,6 +27,9 @@ int main(){
 
     circle c1;
     c1.draw();
-    
+
+    square s1;
+    s1.draw();
+
 return 0;
 }

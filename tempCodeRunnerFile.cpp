@@ -1,4 +1,2 @@
-
-    // user u1(100);
-    // u1.setvalue("1234yash");
-    // u1.getvalue();
+1.x++<<endl;
+    // cout<<e
