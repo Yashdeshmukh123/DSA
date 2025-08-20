@@ -58,12 +58,38 @@ class bankaccount{
             cout<<"balance = "<<balance<<endl;
         }
 };
+
+
+class person{
+    public:
+    string name;
+    int age;
+
+};
+
+class student : public person{
+
+    public:
+    string studentid;
+    student(string n,int a ,string s){
+        name = n;
+        age = a;
+        studentid = s;
+    }
+    void displaystudentinfo(){
+        cout<<"name = "<<name<<endl;
+        cout<<"age = "<<age<<endl;
+        cout<<"student id = "<<studentid<<endl;
+    }
+};
 int main(){
 
-    bankaccount b1;
-    b1.deposit(10000);
-    b1.getbalance();
-    b1.withdraw(300);
-    b1.getbalance();
+    // bankaccount b1;
+    // b1.deposit(10000);
+    // b1.getbalance();
+    // b1.withdraw(300);
+    // b1.getbalance();
 
+    student student("alice",20,"s12345");
+    student.displaystudentinfo();
 }
